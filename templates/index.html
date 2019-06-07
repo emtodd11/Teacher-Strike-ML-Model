@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strike Predictor</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+
+	<header>
+		<div class="container">
+		    <h1>School District Strike Predictor</h1>
+	    </div>
+	</header>
+        <div class="container">
+            <img src="https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Ftimedotcom.files.wordpress.com%2F2019%2F01%2Flos-angeles-strike-charter-schools.jpg&w=800&c=sc&poi=face&q=85"/>
+            <br>
+            <form action="/predict" method="POST" class="form">
+                <div class="fieldset">
+                    <label>Enter Total Number of Students Enrolled</label>
+                    <input class="exp" name="numStudents"/>
+                </div>
+                <br>
+                <div class="fieldset">
+                    <label>Enter Percentage Charter Schools</label>
+                    <input class="exp" name="charterPercent"/>
+                </div>
+                <br>
+                <div class="fieldset">
+                    <label>Enter Percentage of ELL Students</label>
+                    <input class="exp" name="ELLPercent"/>
+                </div>
+                <br>
+                <div class="fieldset">
+                    <label>Enter Percentage of IEP Students</label>
+                    <input class="exp" name="IEPPercent"/>
+                </div>
+                <br>
+                <div class="fieldset">
+                    <label>Enter Number of Students per Teacher</label>
+                    <input class="exp" name="studentRatio"/>
+                </div>
+                <br>
+                <div class="fieldset">
+                    <label>Enter Expenditures per Dollar Revenue</label>
+                    <input class="exp" name="revenueRatio"/>
+                </div>
+
+
+                <input type="submit" class="button" value="predict">
+                <br>
+            </form>
+        </div>
+    </body>
+</html>
