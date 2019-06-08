@@ -52,6 +52,7 @@ def predict():
                 data.append(float(request.form['charterPercent'])/100)
                 data.append(float(request.form['ELLPercent'])/100)
                 data.append(float(request.form['IEPPercent'])/100)
+                data.append(float(request.form['lowIncomePercent'])/100)
                 data.append(float(request.form['studentRatio']))
                 data.append(float(request.form['revenueRatio']))
 
